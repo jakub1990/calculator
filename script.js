@@ -1,6 +1,9 @@
 const operator = ['+', '-', '*', '/'];
-const num1;
-const num2;
+//const num1;
+//const num2;
+const buttons = document.querySelectorAll('.digit');
+
+
 
 function add(num1,num2) {
   return num1 + num2;
@@ -34,5 +37,9 @@ function operate(num1,num2,operator) {
     }
 }
 
-
-Create a new function operate that takes an operator and 2 numbers and then calls one of the above functions on the numbers.
+buttons.forEach(button => {
+  button.addEventListener('click', function() {
+    const display = document.querySelector('.display');
+    display.value += this.textContent;
+  });
+});
