@@ -36,10 +36,3 @@ function operate(num1,num2,operator) {
         divide(num1,num2);    
     }
 }
-
-buttons.forEach(button => {
-  button.addEventListener('click', function() {
-    const display = document.querySelector('.display');
-    display.value += this.textContent;
-  });
-});
